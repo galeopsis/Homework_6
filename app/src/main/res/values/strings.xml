@@ -1,5 +1,31 @@
 <resources>
     <string name="app_name">Notes</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note">Заметка</string>
+    <string name="test1">Заметка1</string>
+    <string name="test2">Заметка2</string>
+    <string name="test3">Заметка3</string>
+    <string name="test4">Заметка4</string>
+    <string name="test5">Заметка5</string>
+    <string name="firstNoteDescription">Описание первой заметки</string>
+    <string name="secondNoteDescription">Описание второй заметки</string>
+    <string name="thirdNoteDescription">Описание третьей заметки</string>
+    <string name="fourthNoteDescription">Описание четвёртой заметки</string>
+    <string name="fifthNoteDescription">Описание пятой заметки</string>
+    <string name="firstNoteCreated">09.05.2021</string>
+    <string name="secondNoteCreated">08.05.2021</string>
+    <string name="thirdNoteCreated">07.05.2021</string>
+    <string name="fourthNoteCreated">06.05.2021</string>
+    <string name="fifthNoteCreated">05.05.2021</string>
+    <string name="firstNoteContent">В этой заметке содержиться всякая ерунда</string>
+    <string name="secondNoteContent">А в этой заметке ерунды ещё больше</string>
+    <string name="thirdNoteContent">Вот в этой заметке ерунды чуть-чуть совсем =)</string>
+    <string name="fourthNoteContent">Эта заметка очень серьёзная и в ней совсем нет ерунды!</string>
+    <string name="fifthNoteContent">А эта заметка очень важная и в ней очень важные заметки записаны!!!</string>
+    <string name="description">Описание заметки</string>
+    <string name="createDate">22.04.2020</string>
+    <string name="content">Здесь всякая ерунда написана просто для теста!!!</string>
+    <string name="DateNotSet">Date not set</string>
+    <string name="btnSetDateText">set date</string>
+
 </resources>
