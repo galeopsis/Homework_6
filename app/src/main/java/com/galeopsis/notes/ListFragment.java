@@ -54,28 +54,23 @@ public class ListFragment extends Fragment {
 
         LinearLayout notesList = view.findViewById(R.id.notes_list);
 
+
         for (Note note : notes) {
 
-            View cityView = LayoutInflater.from(requireContext()).inflate(R.layout.item_note, notesList, false);
+            View noteView = LayoutInflater.from(requireContext()).inflate(R.layout.item_note, notesList, false);
 
-            cityView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    openCityDetail(note);
-                }
-            });
+            noteView.setOnClickListener(v -> openNoteDetail(note));
 
-
-            TextView title = cityView.findViewById(R.id.note_name);
+            TextView title = noteView.findViewById(R.id.note_name);
             title.setText(note.getTitleRes());
 
-            notesList.addView(cityView);
+            notesList.addView(noteView);
 
         }
-
     }
 
-    private void openCityDetail(Note note) {
+
+    private void openNoteDetail(Note note) {
         if (getActivity() instanceof PublisherHolder) {
             PublisherHolder holder = (PublisherHolder) getActivity();
 
@@ -90,6 +85,5 @@ public class ListFragment extends Fragment {
     public interface OnNoteClicked {
         void onNoteClicked(Note note);
     }
-
 
 }

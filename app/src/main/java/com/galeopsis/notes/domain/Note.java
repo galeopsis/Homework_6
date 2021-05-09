@@ -18,17 +18,40 @@ public class Note implements Parcelable {
             return new Note[size];
         }
     };
+
     @StringRes
     private final int titleRes;
+    private final int description;
+    private final int createDate;
+    private final int noteContent;
 
-    public Note(int titleRes) {
+    public Note(int titleRes, int description, int createDate, int noteContent) {
         this.titleRes = titleRes;
+        this.description = description;
+        this.createDate = createDate;
+        this.noteContent = noteContent;
     }
 
     protected Note(Parcel in) {
         titleRes = in.readInt();
+        description = in.readInt();
+        createDate = in.readInt();
+        noteContent = in.readInt();
     }
 
+    public int getDescription() {
+        return description;
+
+    }
+
+    public int getCreateDate() {
+        return createDate;
+
+    }
+
+    public int getNoteContent() {
+        return noteContent;
+    }
 
     public int getTitleRes() {
         return titleRes;
@@ -42,5 +65,8 @@ public class Note implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(titleRes);
+        dest.writeInt(description);
+        dest.writeInt(createDate);
+        dest.writeInt(noteContent);
     }
 }

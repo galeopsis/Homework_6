@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin16"
-        android:gravity="center"
-        tools:text="@string/note" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:gravity="center"
+            tools:text="@string/note" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:gravity="center"
+            tools:text="@string/description" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:background="#03f0dc"
+            android:visibility="gone" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"/>
+
+        <TextView
+            android:id="@+id/createDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/DateNotSet" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/setDateBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="130dp"
+            android:text="@string/btnSetDateText" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16"
+            android:gravity="center"
+            tools:text="@string/content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
